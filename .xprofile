@@ -22,7 +22,7 @@ export SSH_ASKPASS="/usr/bin/ksshaskpass"
 
 # Golang path
 export GOPATH="$HOME/.go"
-PATH="$PATH:$HOME:$GOPATH/bin"
+PATH="$PATH:$GOPATH/bin"
 
 # ELectron Mirror
 export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
