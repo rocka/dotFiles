@@ -1,0 +1,31 @@
+{
+    "editor.fontFamily": "'Monaco', 'WenQuanYi Micro Hei', 'Noto Color Emoji'",
+    "editor.fontSize": 16,
+    "editor.formatOnType": true,
+    "editor.lineHeight": 25,
+    "editor.renderIndentGuides": true,
+    "editor.tabCompletion": true,
+    "editor.acceptSuggestionOnEnter": false,
+    "editor.dragAndDrop": true,
+    "editor.snippetSuggestions": "inline",
+    "editor.stablePeek": true,
+    "terminal.integrated.fontFamily": "'Monaco', 'WenQuanYi Micro Hei', 'Noto Color Emoji'",
+    "terminal.integrated.fontSize": 15,
+    "git.confirmSync": false,
+    "window.menuBarVisibility": "toggle",
+    "workbench.iconTheme": "vs-nomo-dark",
+    "emmet.syntaxProfiles": {
+        "vue-html": "html",
+        "vue": "html"
+    },
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "vue"
+    ],
+    "files.insertFinalNewline": true,
+    "explorer.openEditors.visible": 0,
+    "diffEditor.renderSideBySide": false,
+    "vetur.format.html.wrap_attributes": "force-aligned",
+    "auto-close-tag.SublimeText3Mode": true
+}

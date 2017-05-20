@@ -1,0 +1,3 @@
+#!/bin/sh
+
+aria2c --conf="$HOME/.aria2/aria2.conf">/dev/null&

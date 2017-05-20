@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# Local PATH
+PATH="$PATH:$HOME/.local/bin"
+
+# Editor to use
+export EDITOR="vim"
+
+# Fcitx IM
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+
+# Android SDK dir
+export ANDROID_HOME="$HOME/Softwares/AndroidSdk"
+
+# ssh agent
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+# KWallet ssh unlock
+export SSH_ASKPASS="/usr/bin/ksshaskpass"
+
+# Golang path
+export GOPATH="$HOME/.go"
+PATH="$PATH:$HOME:$GOPATH/bin"
+
+# ELectron Mirror
+export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
