@@ -13,11 +13,11 @@ some dotFiles, of my own
 │   │       └── settings.json
 │   ├── fish
 │   │   └── fishfile           // fisherman
-│   └── fontconfig
-│       └── fonts.conf         // fontconfig
+│   ├── fontconfig
+│   │   └── fonts.conf         // fontconfig
+│   └── libinput-gestures.conf // kde flavored libinput-gestures config
 ├── .eslintrc.json             // default settings for eslint
 ├── .gitconfig                 // git proxy and alias
-├── libinput-gestures.conf     // kde flavored libinput-gestures config
 ├── LICENSE                    // WTFPL
 ├── .pac                       // genpac
 │   ├── config.ini             // ├── config
