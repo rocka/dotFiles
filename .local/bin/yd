@@ -1,0 +1,12 @@
+#!/bin/bash
+
+show_dlg() {
+    sed ':a;N;$!ba;s/\\n/<br>/g' - | kdialog --textbox - 512 512
+}
+
+if [ "$1" = "" ]; then
+    kdialog --inputbox "Text to translate" | ydcv | show_dlg
+else
+    ydcv $1 | show_dlg
+fi
+
