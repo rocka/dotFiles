@@ -26,8 +26,9 @@
 
 wikipedia.org
 nodejs.org
-heroku.com
-herokuapp.com
+||heroku.com
+||herokuapp.com
+||herokucdn.com
 sublimetext.com
 github.com
 rawgit.com
@@ -47,6 +48,7 @@ ubuntu.org
 bwh1.net
 64clouds.com
 webupd8.com
+webupd8.org
 python.org
 mozilla.org
 vuejs.org
@@ -71,7 +73,20 @@ posativ.org
 greasyfork.org
 imgur.com
 muse-ui.org
-live.com
-.live.com
+||live.com
 bbs.archlinuxcn.org
 t.co
+askubuntu.com
+myget.org
+||kxcdn.com
+cdn.bootcss.com
+||js.org
+cdn.jsdelivr.net
+cdnjs.cloudflare.com
+repl.it
+||cdn77.org
+||pling.com
+||opendesktop.org
+||googlesyndication.com
+||newrelic.com
+||pinterest.com
