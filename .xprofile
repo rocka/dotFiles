@@ -7,8 +7,8 @@ PATH="$PATH:$HOME/.local/bin"
 export EDITOR="vim"
 
 # Fcitx IM
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
+export GTK_IM_MODULE="fcitx"
+export QT_IM_MODULE="fcitx"
 export XMODIFIERS="@im=fcitx"
 
 # Android SDK dir
@@ -20,12 +20,12 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 # KWallet ssh unlock
 export SSH_ASKPASS="/usr/bin/ksshaskpass"
 
-# Golang path
-export GOPATH="$HOME/.go"
-PATH="$PATH:$GOPATH/bin"
-
 # ELectron Mirror
 export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/"
 
 # Node-Sass Mirror
 export SASS_BINARY_SITE="https://npm.taobao.org/mirrors/node-sass"
+
+# GTK3 HiDPI Scale
+export GDK_SCALE=2
+export GDK_DPI_SCALE=0.5
