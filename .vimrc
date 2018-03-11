@@ -12,9 +12,13 @@ set autoindent
 set smartindent
 
 " 4 spaces for tab
+set expandtab
 set shiftwidth=4
 set tabstop=4
-set expandtab
+
+" show invisible char
+set listchars=eol:⏎,tab:␉·,trail:␠,nbsp:⎵
+set list
 
 " Typos ;-)
 cmap WQ wq
