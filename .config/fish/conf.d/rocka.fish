@@ -1,8 +1,8 @@
 #!/usr/bin/fish
 
 alias l="ls -lh"
-alias ll="ls -Alh"
 alias pq="proxychains -q"
 alias qwq="uname -snrm; uptime"
+alias cman="env LANG=zh_CN.UTF-8 man"
 alias clip="xclip -selection clipboard"
-alias dokku="env DOKKU_HOST=dokku.rocka.me dokku"
+
