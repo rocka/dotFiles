@@ -1,5 +1,6 @@
 " line numbers
-set nu!
+set nu
+highlight LineNr ctermfg=lightgrey
 
 " syntax highlight
 syntax on
@@ -26,5 +27,12 @@ cmap Wq wq
 cmap W w
 cmap Q q
 
-" Allow saving of files as sudo when I forgot to start vim using sudo.
+" Allow saving of files as sudo when I forgot to start vim using sudo
 cmap w!! w !sudo tee > /dev/null %
+
+" Powerline
+set laststatus=2
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+
