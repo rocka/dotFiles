@@ -18,7 +18,7 @@ set shiftwidth=4
 set tabstop=4
 
 " show invisible char
-set listchars=eol:⏎,tab:␉·,trail:␠,nbsp:⎵
+set listchars=eol:␊,tab:␉·,trail:␠
 set list
 
 " Typos ;-)

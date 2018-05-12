@@ -1,6 +1,10 @@
-# .pam_environment
+#
+# ~/.pam_environment
+#
+
 # Local PATH
 PATH  DEFAULT=${PATH}:@{HOME}/.local/bin
+
 # Editor to use
 EDITOR=vim
 
@@ -18,13 +22,6 @@ SSH_AUTH_SOCK DEFAULT=${XDG_RUNTIME_DIR}/ssh-agent.socket
 # KWallet ssh unlock
 SSH_ASKPASS=/usr/bin/ksshaskpass
 
-# ELectron Mirror
-ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/
-
-# Node-Sass Mirror
-SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass
-
 # GTK3 HiDPI Scale
 GDK_SCALE=2
 GDK_DPI_SCALE=0.5
-

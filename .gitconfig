@@ -3,3 +3,10 @@
 	co = checkout
 	st = status
 	cp = cherry-pick
+	cm = commit -m
+[user]
+#	name =
+#	email =
+	signingkey = 28031158FFDD6853
+[commit]
+	gpgsign = true
