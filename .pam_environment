@@ -2,25 +2,31 @@
 # ~/.pam_environment
 #
 
-# Local PATH
-PATH  DEFAULT=${PATH}:@{HOME}/.local/bin
-
 # Editor to use
 EDITOR=vim
+
+# Go PATH
+GOPATH DEFAULT=@{HOME}/.go
+
+# Local PATH
+PATH DEFAULT=${GOPATH}/bin:@{HOME}/.local/bin:${PATH}
 
 # Fcitx IM
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
 
-# Android SDK dir
-ANDROID_HOME  DEFAULT=@{HOME}/Softwares/AndroidSdk
+# Android SDK
+ANDROID_HOME DEFAULT=@{HOME}/Softwares/AndroidSDK
 
 # ssh agent
 SSH_AUTH_SOCK DEFAULT=${XDG_RUNTIME_DIR}/ssh-agent.socket
 
 # KWallet ssh unlock
 SSH_ASKPASS=/usr/bin/ksshaskpass
+
+# Plasma HiDPI Scale
+#PLASMA_USE_QT_SCALING=1
 
 # GTK3 HiDPI Scale
 GDK_SCALE=2

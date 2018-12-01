@@ -1,3 +1,6 @@
+" system default
+runtime! archlinux.vim
+
 " line numbers
 set nu
 highlight LineNr ctermfg=lightgrey
@@ -18,8 +21,8 @@ set shiftwidth=4
 set tabstop=4
 
 " show invisible char
-set listchars=eol:␊,tab:␉·,trail:␠
-set list
+"set listchars=eol:␊,tab:␉·,trail:␠
+"set list
 
 " Typos ;-)
 cmap WQ wq
@@ -36,3 +39,8 @@ python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
 
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif

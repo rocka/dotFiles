@@ -1,0 +1,45 @@
+[Description]
+Skin=Breeze Perfect Dark
+Author=Noah Davis (based on Breeze by Andreas Kainz)
+Email=noahadvs@gmail.com
+Icon=/icon.svg
+
+[Border]
+red=49
+green=54
+blue=59
+width=0
+
+[Text]
+x=34
+y=20
+red=252
+green=252
+blue=252
+text=Drop-Down Terminal
+
+[Background]
+back_image=/title/back-no_gradient-shadow.svg
+left_corner=/title/left-no_gradient-shadow.svg
+right_corner=/title/right-no_gradient-shadow.svg
+
+[FocusButton]
+x=73
+y=3
+up_image=/title/focus_up.svg
+over_image=/title/focus_over.svg
+down_image=/title/focus_down.svg
+
+[ConfigButton]
+x=49
+y=3
+up_image=/title/config_up.svg
+over_image=/title/config_over.svg
+down_image=/title/config_down.svg
+
+[QuitButton]
+x=25
+y=3
+up_image=/title/quit_up.svg
+over_image=/title/quit_over.svg
+down_image=/title/quit_down.svg

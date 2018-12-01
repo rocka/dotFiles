@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Comment=Add private keys to ssh-agent.
+Exec=/usr/bin/ssh-add
+Icon=dialog-password
+Name=ssh-add
+OnlyShowIn=KDE;
+Terminal=false

@@ -1,9 +1,21 @@
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	co = checkout
-	st = status
+	st = status --short --branch
 	cp = cherry-pick
 	cm = commit -m
+	please = push --force-with-lease
+	commend = commit --amend --no-edit
+	it = !git init && git commit -m “root” --allow-empty
+	stsh = stash --keep-index
+	staash = stash --include-untracked
+	staaash = stash --all
+	g = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
+	undo = reset HEAD^
+[https]
+#	proxy = "socks5://127.0.0.1:1080"
+[http]
+#	proxy = "socks5://127.0.0.1:1080"
 [user]
 #	name =
 #	email =

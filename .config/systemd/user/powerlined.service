@@ -1,0 +1,10 @@
+[Unit]
+Description=Powerline Daemon.
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/powerline-daemon --foreground
+ExecRestart=/usr/bin/powerline-daemon --replace
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,41 @@
+[Description]
+Skin=Breeze Perfect Dark
+Author=Noah Davis (based on Breeze by Andreas Kainz)
+Email=noahadvs@gmail.com
+Icon=/icon.svg
+
+[Tabs] Do not change the line number of the x parameter! You will mess up the scripts!
+x=27
+y=0
+red=252
+green=252
+blue=252
+separator_image=/tabs/separator.svg
+selected_background=/tabs/selected_back.svg
+selected_left_corner=/tabs/selected_left.svg
+selected_right_corner=/tabs/selected_right.svg
+unselected_background=/tabs/unselected_back.svg
+unselected_left_corner=/tabs/unselected_back.svg
+unselected_right_corner=/tabs/unselected_right.svg
+prevent_closing_image=/tabs/lock.svg
+prevent_closing_image_x=6
+prevent_closing_image_y=6
+
+[Background]
+back_image=/tabs/back_image.svg
+;left_corner=/tabs/left_corner.svg
+;right_corner=/tabs/right_corner.svg
+
+[PlusButton]
+x=0
+y=0
+up_image=/tabs/add_up-square.svg
+over_image=/tabs/add_over-square.svg
+down_image=/tabs/add_down-square.svg
+
+[MinusButton] Do not change the line number of the x parameter! You will mess up the scripts!
+x=28
+y=0
+up_image=/tabs/close_up-square.svg
+over_image=/tabs/close_over-square.svg
+down_image=/tabs/close_down-square.svg
