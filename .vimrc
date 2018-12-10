@@ -33,14 +33,22 @@ cmap Q q
 " Allow saving of files as sudo when I forgot to start vim using sudo
 cmap w!! w !sudo tee > /dev/null %
 
+" X11 clipboard
+if has('clipboard')
+  set clipboard=unnamedplus
+endif
+
+" mouse input
+set mouse=a
+
 " Powerline
 set laststatus=2
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
 
-" Uncomment the following to have Vim jump to the last position when
-" reopening a file
+" jump to the last position when reopening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
