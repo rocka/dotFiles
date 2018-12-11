@@ -16,7 +16,11 @@ some dotFiles, of my own
 │   │   │   └── rocka.fish     // fish shell alias
 │   │   └── fishfile           // fisher packages
 │   ├── fontconfig
-│   │   └── fonts.conf
+│   │   ├── conf.d
+│   │   │   ├── 10-replace.conf
+│   │   │   ├── 20-telegram-desktop.conf
+│   │   │   └── 30-color-emoji.conf
+│   │   └── fonts.conf
 │   ├── gtk-3.0
 │   │   ├── bookmarks
 │   │   ├── gtk.css
