@@ -28,6 +28,8 @@ some dotFiles, of my own
 │   ├── latte                  // Latte Dock
 │   │   └── Top Panel.layout.latte
 │   └── libinput-gestures.conf // kde flavored libinput-gestures config
+│   ├── nvim                   // neovim
+│   │   └── init.vim
 │   └── systemd                // systemd user service
 │       └── user
 │           ├── aria2.service
