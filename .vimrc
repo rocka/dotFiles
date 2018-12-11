@@ -34,6 +34,7 @@ cmap Q q
 cmap w!! w !sudo tee > /dev/null %
 
 " X11 clipboard
+" install gvim instead of vim in Arch Linux to use this feature
 if has('clipboard')
   set clipboard=unnamedplus
 endif
