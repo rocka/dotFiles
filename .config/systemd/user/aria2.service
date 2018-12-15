@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/aria2c --conf=/home/rocka/.config/aria2.conf
+ExecStart=/usr/bin/aria2c --conf=/home/rocka/.config/aria2/conf.ini
 
 [Install]
 WantedBy=default.target

@@ -3,11 +3,14 @@
 some dotFiles, of my own
 
 ```js
-
 .
 ├── .bashrc
 ├── .config                    // XDG_CONFIG_HOME
-│   ├── aria2.conf             // aria2 websocket rpc
+│   ├── aria2
+│   │   ├── conf.ini           // aria2 websocket JSON RPC and event hooks
+│   │   ├── download-error.sh
+│   │   ├── download-finish.sh
+│   │   └── download-start.sh
 │   ├── autostart
 │   │   └── ssh-add.desktop
 │   ├── chromium-flags.conf    // enable hw video decode
@@ -46,6 +49,7 @@ some dotFiles, of my own
 ├── LICENSE                    // WTFPL
 ├── .local
 │   ├── bin                    // global `bin`
+│   │   └── aria2-dl           // CLI tool for sending `aria2.addUri` to JSON RPC
 │   │   └── yd                 // simple GUI wrapper for `ydcv`
 │   └── share
 │       ├── solid
