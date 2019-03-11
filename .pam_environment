@@ -3,7 +3,7 @@
 #
 
 # Editor to use
-EDITOR=vim
+EDITOR=nvim
 
 # Go PATH
 GOPATH DEFAULT=@{HOME}/.go
@@ -12,9 +12,9 @@ GOPATH DEFAULT=@{HOME}/.go
 PATH DEFAULT=${GOPATH}/bin:@{HOME}/.local/bin:${PATH}
 
 # Fcitx IM
-GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
+GTK_IM_MODULE=fcitx5
+QT_IM_MODULE=fcitx5
+XMODIFIERS=@im=fcitx5
 
 # Android SDK
 ANDROID_HOME DEFAULT=@{HOME}/Softwares/AndroidSDK
@@ -26,8 +26,8 @@ SSH_AUTH_SOCK DEFAULT=${XDG_RUNTIME_DIR}/ssh-agent.socket
 SSH_ASKPASS=/usr/bin/ksshaskpass
 
 # Plasma HiDPI Scale
-#PLASMA_USE_QT_SCALING=1
+PLASMA_USE_QT_SCALING=1
 
 # GTK3 HiDPI Scale
-GDK_SCALE=2
-GDK_DPI_SCALE=0.5
+#GDK_SCALE=2
+#GDK_DPI_SCALE=0.5
