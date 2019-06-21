@@ -11,6 +11,7 @@ usage() {
 DEBUG="0"
 ID=$(date +%s)
 JSON_TPL='{"jsonrpc":"2.0","id":"","method":"aria2.addUri","params":[[]]}'
+AUTH=''
 
 # https://stackoverflow.com/a/16496491/8370777
 while getopts "d" o;
@@ -26,19 +27,24 @@ do
 done
 shift $((OPTIND-1))
 
-JSON=$(echo "$JSON_TPL" | jq -M ".id=$ID")
+JSON=$(echo "$JSON_TPL" | jq ".id=$ID")
 
 for URL in $@;
 do
-    JSON=$(echo "$JSON_TPL" | jq -M ".params[0]+=[\"$1\"]")
+    JSON=$(echo "$JSON" | jq ".params[0]+=[\"$1\"]")
 done
+
+if [ ! -z "$AUTH" ];
+then
+    JSON=$(echo "$JSON" | jq ".params = [\"$AUTH\"]+ .params")
+fi
 
 if [ "$DEBUG" == "1" ];
 then
     echo "$JSON" | jq
 else
-    curl --silent -X POST                    \
-        -H "Content-Type: application/json"  \
-        --data "$JSON"                       \
-        http://localhost:6800/jsonrpc        | jq
+    curl --silent -X POST                     \
+        -H "Content-Type: application/json"   \
+        --data "$JSON"                        \
+        "http://localhost:6800/jsonrpc"       | jq
 fi

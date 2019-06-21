@@ -1,6 +1,6 @@
 #!/usr/bin/fish
 
-alias ls="ls --color=auto --indicator-style=classify --time-style=long-iso"
+alias ls="ls --color --classify --time-style=long-iso"
 alias l="ls"
 alias ll="ls -lh"
 alias la="ls -alh"
