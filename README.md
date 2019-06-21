@@ -21,7 +21,6 @@ some dotFiles, of my own
 │   ├── fontconfig
 │   │   ├── conf.d
 │   │   │   ├── 10-replace.conf
-│   │   │   ├── 20-telegram-desktop.conf
 │   │   │   └── 30-color-emoji.conf
 │   │   └── fonts.conf
 │   ├── gtk-3.0
@@ -38,7 +37,7 @@ some dotFiles, of my own
 │           ├── aria2.service
 │           ├── powerlined.service
 │           └── ssh-agent.service
-├── .eslintrc.js               // default settings for eslint
+├── .eslintrc.json             // default settings for eslint
 ├── .gitconfig                 // git proxy and alias
 ├── .gnupg
 │   ├── gpg-agent.conf
@@ -73,7 +72,7 @@ some dotFiles, of my own
 2. install [fisher][fisher] before using my fishfile
 3. [libinput-gestrures][gestrures]
 4. (deprecated) `.pac` is config for [genpac][genpac]
-5. install package [`ydcv`][ydcv] and [`kdialog`][kdialog] before using the script `yd`
+5. install package [`ydcv`][ydcv] (or [`ydcv-rs`][ydcv-rs]) and [`kdialog`][kdialog] before using the script `yd`
 6. Yakuake theme: a modified version of [Breeze Prefect Dark][yakuake-theme]
 7. Telegram tray icon: [Telegram Breeze icons for systray][tg-icon]
 
@@ -87,6 +86,7 @@ some dotFiles, of my own
 [gestrures]: https://github.com/bulletmark/libinput-gestures
 [genpac]: https://github.com/JinnLynn/genpac
 [ydcv]: https://www.archlinux.org/packages/community/any/ydcv/
+[ydcv-rs]: https://aur.archlinux.org/packages/ydcv-rs/
 [kdialog]: https://www.archlinux.org/packages/extra/x86_64/kdialog/
 [yakuake-theme]: https://store.kde.org/p/1193435/
 [tg-icon]: https://store.kde.org/p/1192975
