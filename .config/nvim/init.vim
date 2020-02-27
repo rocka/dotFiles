@@ -1,6 +1,9 @@
 " line numbers
 set nu
 
+" syntax highlight
+syntax on
+
 " file type detect
 filetype on
 
@@ -40,7 +43,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'scrooloose/nerdtree'
 Plug 'tomasiser/vim-code-dark'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'    " v2.3 works with vim-airline v0.9
+Plug 'tpope/vim-fugitive'
 Plug 'jreybert/vimagit'
 
 " Initialize plugin system

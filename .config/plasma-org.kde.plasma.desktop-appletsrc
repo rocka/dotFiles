@@ -1,0 +1,5 @@
+# kimpanel fcitx5 hide unnecessary icons
+[Containments][139][Applets][209][Configuration][Appearance]
+font=Sans Serif,14,-1,5,50,0,0,0,0,0
+hiddenList=/Fcitx/anthy-input-mode,/Fcitx/anthy-typing-method,/Fcitx/anthy-conversion-mode,/Fcitx/punctuation,/Fcitx/mozc-mode,/Fcitx/mozc-tool,/Fcitx/fullwidth,/Fcitx/pinyin-prediction,/Fcitx/chttrans
+use_default_font=false

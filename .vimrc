@@ -34,7 +34,6 @@ cmap Q q
 cmap w!! w !sudo tee > /dev/null %
 
 " X11 clipboard
-" install gvim instead of vim in Arch Linux to use this feature
 if has('clipboard')
   set clipboard=unnamedplus
 endif
@@ -43,13 +42,17 @@ endif
 set mouse=a
 
 " Powerline
-set laststatus=2
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
+"set laststatus=2
+"python3 from powerline.vim import setup as powerline_setup
+"python3 powerline_setup()
+"python3 del powerline_setup
+
+" Airline
+let g:airline_theme = "powerlineish"
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 " jump to the last position when reopening a file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
-

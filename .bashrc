@@ -6,11 +6,10 @@
 [[ $- != *i* ]] && return
 
 # powerline
-PYTHON_SITE_PATH=$(python -c 'import sys;print(sys.path.pop())')
-source "$PYTHON_SITE_PATH/powerline/bindings/bash/powerline.sh"
+source "/usr/share/powerline/bindings/bash/powerline.sh"
 
 # common alias
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --indicator-style=classify --time-style=long-iso'
 alias l='ls'
 alias ll='ls -lh'
 alias la='ls -alh'

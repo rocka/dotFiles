@@ -6,10 +6,11 @@
 EDITOR=nvim
 
 # Go PATH
-GOPATH DEFAULT=@{HOME}/.go
+#GOPATH DEFAULT=@{HOME}/.go
 
 # Local PATH
-PATH DEFAULT=${GOPATH}/bin:@{HOME}/.local/bin:${PATH}
+#PATH DEFAULT=${GOPATH}/bin:@{HOME}/.local/bin:${PATH}
+PATH DEFAULT=@{HOME}/.local/bin:${PATH}
 
 # Fcitx IM
 GTK_IM_MODULE=fcitx5
@@ -29,5 +30,5 @@ SSH_ASKPASS=/usr/bin/ksshaskpass
 PLASMA_USE_QT_SCALING=1
 
 # GTK3 HiDPI Scale
-#GDK_SCALE=2
-#GDK_DPI_SCALE=0.5
+#GDK_SCALE=1
+#GDK_DPI_SCALE=1
