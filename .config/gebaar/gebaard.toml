@@ -1,12 +1,12 @@
 [commands.swipe.three]
 left_up = ""
 right_up = ""
-up = "xdotool key super+ctrl+Down"
+up = "kwindesktopctl up"
 left_down = ""
 right_down = ""
-down = "xdotool key super+ctrl+Up"
-left = "xdotool key super+ctrl+Right"
-right = "xdotool key super+ctrl+Left"
+down = "kwindesktopctl down"
+left = "kwindesktopctl left"
+right = "kwindesktopctl right"
 
 [commands.swipe.four]
 left_up = ""

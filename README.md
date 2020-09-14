@@ -59,7 +59,8 @@ some dotFiles, of my own
 ├── LICENSE                    // WTFPL
 ├── .local
 │   ├── bin                    // global `bin`
-│   │   └── aria2-dl           // CLI tool for sending `aria2.addUri` to JSON RPC
+│   │   ├── aria2-dl           // CLI tool for sending `aria2.addUri` to JSON RPC
+│   │   ├── kwindesktopctl     // script to switch virtual desktop in kde
 │   │   └── yd                 // simple GUI wrapper for `ydcv`
 │   └── share
 │       ├── solid
