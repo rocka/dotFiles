@@ -22,3 +22,7 @@
 	signingkey = 28031158FFDD6853
 [commit]
 	gpgsign = true
+[diff]
+		algorithm = patience
+[pull]
+		ff = only

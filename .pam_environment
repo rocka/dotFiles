@@ -13,9 +13,9 @@ EDITOR=nvim
 PATH DEFAULT=@{HOME}/.local/bin:${PATH}
 
 # Fcitx IM
-GTK_IM_MODULE=fcitx5
-QT_IM_MODULE=fcitx5
-XMODIFIERS=@im=fcitx5
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
 
 # Android SDK
 ANDROID_HOME DEFAULT=@{HOME}/Softwares/AndroidSDK
