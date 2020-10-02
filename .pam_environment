@@ -12,19 +12,28 @@ EDITOR=nvim
 #PATH DEFAULT=${GOPATH}/bin:@{HOME}/.local/bin:${PATH}
 PATH DEFAULT=@{HOME}/.local/bin:${PATH}
 
+# Xauthority
+XAUTHORITY DEFAULT=${XDG_RUNTIME_DIR}/Xauthority
+
 # Fcitx IM
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
 
 # Android SDK
-ANDROID_HOME DEFAULT=@{HOME}/Softwares/AndroidSDK
+ANDROID_HOME DEFAULT=@{HOME}/Software/AndroidSDK
 
 # ssh agent
 SSH_AUTH_SOCK DEFAULT=${XDG_RUNTIME_DIR}/ssh-agent.socket
 
 # KWallet ssh unlock
 SSH_ASKPASS=/usr/bin/ksshaskpass
+
+# intel VA-API
+#LIBVA_DRIVER_NAME=iHD
+
+# Qt automatic scaling based on pixel density of the monitor
+#QT_AUTO_SCREEN_SCALE_FACTOR=1
 
 # Plasma HiDPI Scale
 PLASMA_USE_QT_SCALING=1

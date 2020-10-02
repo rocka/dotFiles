@@ -43,11 +43,13 @@ some dotFiles, of my own
 │   ├── powerline
 │   │   └── themes
 │   │       └── tmux           // powerline segments in tmux
-│   └── systemd                // systemd user service
-│       └── user
-│           ├── aria2.service
-│           ├── powerlined.service
-│           └── ssh-agent.service
+│   ├── systemd                // systemd user service
+│   │   └── user
+│   │       ├── aria2.service
+│   │       ├── powerlined.service
+│   │       └── ssh-agent.service
+│   └── tmux
+│       └── tmux.conf          // minial powerline-enabled tmux config
 ├── .eslintrc.json             // default settings for eslint
 ├── .gitconfig                 // git proxy and alias
 ├── .gnupg
@@ -76,7 +78,6 @@ some dotFiles, of my own
 │   └── user-rules.txt         // └── gfwlist user rules
 ├── .pam_environment           // environment variables
 ├── README.md
-├── .tmux.conf                 // minial powerline-enabled tmux config
 └── .vimrc
 ```
 
