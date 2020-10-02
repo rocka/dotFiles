@@ -1,5 +1,6 @@
 " system default
-runtime! archlinux.vim
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
 
 " line numbers
 set nu
@@ -56,3 +57,4 @@ let g:airline#extensions#tabline#enabled = 1
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+

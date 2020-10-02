@@ -60,6 +60,7 @@ some dotFiles, of my own
 ├── .local
 │   ├── bin                    // global `bin`
 │   │   ├── aria2-dl           // CLI tool for sending `aria2.addUri` to JSON RPC
+│   │   ├── btw                // print a blue Arch
 │   │   ├── kwindesktopctl     // script to switch virtual desktop in kde
 │   │   └── yd                 // simple GUI wrapper for `ydcv`
 │   └── share
