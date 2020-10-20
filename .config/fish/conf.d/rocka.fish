@@ -1,5 +1,9 @@
 #!/usr/bin/fish
 
+# bobthefish theme configuration
+set -g theme_date_format "+%F %a %T"
+set -g theme_date_timezone Asia/Shanghai
+
 alias ls="ls --color --classify --time-style=long-iso"
 alias l="ls"
 alias ll="ls -lh"
