@@ -91,6 +91,9 @@ some dotFiles, of my own
 - install package [`ydcv`][ydcv] (or [`ydcv-rs`][ydcv-rs]) and [`kdialog`][kdialog] before using the script `yd`
 - Yakuake theme: a modified version of [Breeze Prefect Dark][yakuake-theme]
 - (deprecated) Telegram tray icon: [Telegram Breeze icons for systray][tg-icon]
+- install [powerline][powerline] to use powerline in tmux & bash
+- install [powerline-vim][powerline-vim] to use powerline in vim
+- install [vim-airline][vim-airline] and [vim-airline-themes][vim-airline-themes] to use airline in neovim
 
 [noto]: https://www.archlinux.org/packages/extra/any/noto-fonts/
 [noto-cjk]: https://www.archlinux.org/packages/extra/any/noto-fonts-cjk/
@@ -106,3 +109,7 @@ some dotFiles, of my own
 [kdialog]: https://www.archlinux.org/packages/extra/x86_64/kdialog/
 [yakuake-theme]: https://store.kde.org/p/1193435/
 [tg-icon]: https://store.kde.org/p/1192975
+[powerline]: https://www.archlinux.org/packages/community/x86_64/powerline/
+[powerline-vim]: https://www.archlinux.org/packages/community/x86_64/powerline-vim/
+[vim-airline]: https://www.archlinux.org/packages/community/any/vim-airline/
+[vim-airline-themes]: https://www.archlinux.org/packages/community/any/vim-airline-themes/
