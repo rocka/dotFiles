@@ -1,63 +1,34 @@
-#!/bin/bash
+#!/usr/bin/bash
 
-dbus_get_vdm_prop() {
+dbus_invoke_shortcut() {
     dbus-send \
-    --dest=org.kde.KWin \
+    --dest=org.kde.kglobalaccel \
     --print-reply=literal \
-    /VirtualDesktopManager \
-    org.freedesktop.DBus.Properties.Get \
-    string:org.kde.KWin.VirtualDesktopManager string:$1
+    /component/kwin "org.kde.kglobalaccel.Component.invokeShortcut" "string:$1"
 }
 
-get_desktop_prop() {
-    REPLY=$(dbus_get_vdm_prop "$1")
-    echo "${REPLY//   variant       uint32 /}"
-}
+DIRECTION=""
 
-dbus_call_kwin() {
-    dbus-send \
-    --dest=org.kde.KWin \
-    --print-reply=literal \
-    /KWin "org.kde.KWin.$1" $2
-}
-
-get_current_desktop() {
-    REPLY=$(dbus_call_kwin "currentDesktop")
-    echo "${REPLY//   int32 /}"
-}
-
-set_current_desktop() {
-    REPLY=$(dbus_call_kwin "setCurrentDesktop" "int32:$1")
-}
-
-DESKTOP_CNT=$(get_desktop_prop count)
-DESKTOP_ROW=$(get_desktop_prop rows)
-DESKTOP_COLUMN=$(( $DESKTOP_CNT / $DESKTOP_ROW ))
-
-CURRENT_DESKTOP=$(get_current_desktop)
-CURRENT_ROW=$(( ($CURRENT_DESKTOP - 1) / 2 ))
-CURRENT_COLUMN=$(( ($CURRENT_DESKTOP - 1) % 2 ))
-#echo "current: $CURRENT_DESKTOP (row:$CURRENT_ROW col:$CURRENT_COLUMN)"
-
-TARGET_ROW=$CURRENT_ROW
-TARGET_COLUMN=$CURRENT_COLUMN
-
-case $1 in
+case "$1" in
     up)
-        TARGET_ROW=$(( ($CURRENT_ROW + $DESKTOP_ROW - 1) % $DESKTOP_ROW ))
+        DIRECTION="Up"
     ;;
     down)
-        TARGET_ROW=$(( ($CURRENT_ROW + 1) % $DESKTOP_ROW ))
+        DIRECTION="Down"
     ;;
     left)
-        TARGET_COLUMN=$(( ($CURRENT_COLUMN + $DESKTOP_COLUMN - 1) % $DESKTOP_COLUMN ))
+        DIRECTION="to the Left"
     ;;
     right)
-        TARGET_COLUMN=$(( ($CURRENT_COLUMN + 1) % $DESKTOP_COLUMN ))
+        DIRECTION="to the Right"
     ;;
 esac
 
-TARGET_DESKTOP=$(( $TARGET_ROW * $DESKTOP_COLUMN + $TARGET_COLUMN + 1 ))
-#echo "target:  $TARGET_DESKTOP (row:$TARGET_ROW col:$TARGET_COLUMN)"
-
-set_current_desktop $TARGET_DESKTOP
+case "$2" in
+    --window)
+        dbus_invoke_shortcut "Window One Desktop $DIRECTION"
+    ;;
+    --desktop)
+        dbus_invoke_shortcut "Switch One Desktop $DIRECTION"
+    ;;
+esac

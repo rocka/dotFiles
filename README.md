@@ -34,8 +34,6 @@ some dotFiles, of my own
 │   │   └── settings.ini       // GTK window button order
 │   ├── htop
 │   │   └── htoprc
-│   ├── latte                  // Latte Dock
-│   │   └── Top Panel.layout.latte
 │   └── libinput-gestures.conf // kde flavored libinput-gestures config
 │   ├── nvim                   // neovim
 │   │   └── init.vim

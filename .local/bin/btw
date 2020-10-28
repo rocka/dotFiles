@@ -3,7 +3,9 @@
 # https://www.reddit.com/r/archlinux/comments/g8iygf/arch_linux_logo_using_unicode_block_characters
 # https://gist.github.com/LnLcFlx/18eb10bc74ed9e497d0fedc69468f933
 
-echo -e '\e[38;2;23;147;209m                   ▄
+ARCH_BLUE="\e[38;2;23;147;209m"
+ARCH_LOGO="\
+                   ▄
                   ▟█▙
                  ▟███▙
                 ▟█████▙
@@ -21,4 +23,8 @@ echo -e '\e[38;2;23;147;209m                   ▄
     ▟██████████▛        ▜█████████▙
    ▟██████▀▀▀              ▀▀██████▙
   ▟███▀▘                       ▝▀███▙
- ▟▛▀                               ▀▜▙'
+ ▟▛▀                               ▀▜▙
+"
+
+echo -e "${ARCH_BLUE}${ARCH_LOGO}"
+
