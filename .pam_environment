@@ -5,11 +5,7 @@
 # Editor to use
 EDITOR=nvim
 
-# Go PATH
-#GOPATH DEFAULT=@{HOME}/.go
-
 # Local PATH
-#PATH DEFAULT=${GOPATH}/bin:@{HOME}/.local/bin:${PATH}
 PATH DEFAULT=@{HOME}/.local/bin:${PATH}
 
 # Xauthority
@@ -41,3 +37,21 @@ PLASMA_USE_QT_SCALING=1
 # GTK3 HiDPI Scale
 #GDK_SCALE=1
 #GDK_DPI_SCALE=1
+
+# XDG Base Directory and things
+XDG_CONFIG_HOME DEFAULT=@{HOME}/.config
+XDG_CACHE_HOME  DEFAULT=@{HOME}/.cache
+XDG_DATA_HOME   DEFAULT=@{HOME}/.local/share
+
+LESSHISTFILE            DEFAULT=-
+NODE_REPL_HISTORY       DEFAULT=${XDG_DATA_HOME}/node/node_repl_history
+NPM_CONFIG_USERCONFIG   DEFAULT=${XDG_CONFIG_HOME}/npm/npmrc
+PYTHONSTARTUP           DEFAULT=${XDG_CONFIG_HOME}/python/init.py
+ANDROID_PREFS_ROOT      DEFAULT=${XDG_DATA_HOME}/android
+ANDROID_EMULATOR_HOME   DEFAULT=${XDG_DATA_HOME}/android/emulator
+_JAVA_OPTIONS           DEFAULT=-Djava.util.prefs.userRoot=${XDG_DATA_HOME}/java
+JAVA_TOOL_OPTIONS       DEFAULT="-Dsun.java2d.uiScale=2 -Dawt.useSystemAAFontSettings=on"
+GRADLE_USER_HOME        DEFAULT=${XDG_DATA_HOME}/gradle
+VSCODE_PORTABLE         DEFAULT=${XDG_DATA_HOME}/vscode
+PARALLEL_HOME           DEFAULT=${XDG_DATA_HOME}/parallel
+KDEHOME                 DEFAULT=${XDG_CONFIG_HOME}/kde

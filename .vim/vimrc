@@ -1,3 +1,6 @@
+" data dir
+set viminfo+='1000,n~/.vim/viminfo
+
 " system default
 unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
