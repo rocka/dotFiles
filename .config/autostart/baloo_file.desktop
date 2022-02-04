@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Baloo File Daemon (dummy, disabled)
+Icon=action-unavailable-symbolic
+Type=Application
+NoDisplay=true
+X-KDE-autostart-phase=0
+OnlyShowIn=KDE

@@ -37,7 +37,7 @@ def register_readline():
         elif 'XDG_DATA_HOME' in os.environ:
             history = os.path.join(os.path.expanduser(os.environ['XDG_DATA_HOME']), 'python', 'python_history')
         else:
-            history = os.path.join(os.path.expanduser('~'), '.local', 'share', 'python', 'python_history')
+            history = os.path.join(os.path.expanduser('~'), '.local', 'state', 'python', 'python_history')
 
         history = os.path.abspath(history)
         _dir, _ = os.path.split(history)

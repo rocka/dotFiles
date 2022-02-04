@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=gebaar-libinput
-Icon=preferences-desktop-gestures-touch
-Comment=Touchpad Gesture Daemon for libinput
-Exec=/usr/bin/gebaard -b
-StartupNotify=false
-Terminal=false

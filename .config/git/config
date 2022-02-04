@@ -6,16 +6,12 @@
 	cm = commit -m
 	please = push --force-with-lease
 	commend = commit --amend --no-edit
-	it = !git init && git commit -m “root” --allow-empty
+	it = !git init && git commit -m "root" --allow-empty
 	stsh = stash --keep-index
 	staash = stash --include-untracked
 	staaash = stash --all
 	g = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
 	undo = reset HEAD^
-[https]
-#	proxy = "socks5://127.0.0.1:1080"
-[http]
-#	proxy = "socks5://127.0.0.1:1080"
 [user]
 #	name =
 #	email =
@@ -23,6 +19,22 @@
 [commit]
 	gpgsign = true
 [diff]
-		algorithm = patience
+	algorithm = patience
 [pull]
-		ff = only
+    #ff = only
+[init]
+	defaultBranch = master
+[core]
+    askPass = /usr/bin/ksshaskpass
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+[delta]
+    plus-style = "syntax #012800"
+    minus-style = "syntax #340001"
+    syntax-theme = Monokai Extended
+    navigate = true
+[interactive]
+    diffFilter = delta --color-only
