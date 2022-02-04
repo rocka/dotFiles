@@ -33,10 +33,14 @@ some dotFiles, of my own
 │   │   └── settings.ini       // GTK window button order
 │   ├── htop
 │   │   └── htoprc
+│   ├── mpv
+│   │   └── mpv.conf
 │   ├── npm
 │   │   └── npmrc              // npm local prefix
 │   ├── nvim                   // neovim
 │   │   └── init.vim
+│   ├── octave
+│   │   └── octaverc
 │   ├── powerline
 │   │   └── themes
 │   │       └── tmux           // powerline segments in tmux
@@ -52,7 +56,13 @@ some dotFiles, of my own
 │   │   └── touchegg.conf      // kde flavored touchpad gestures
 │   └── vim
 │   │   └── vimrc
-│   └── chromium-flags.conf    // vaapi and overlay scrollbars
+│   ├── yarn
+│   │   └── config
+│   ├── yay
+│   │   └── config.json
+│   ├── chromium-flags.conf    // vaapi and overlay scrollbars
+│   ├── user-dirs.dirs
+│   └── user-dirs.locale
 ├── .gnupg
 │   ├── dirmngr.conf           // openpgp key server
 │   ├── gpg-agent.conf
