@@ -1,0 +1,52 @@
+#!/bin/bash
+set -euxo pipefail
+
+VIDEO_URL="${1:-""}"
+input_url() {
+    kdialog --textinputbox "Video URL:"
+}
+if [ "$VIDEO_URL" == "" ]
+then
+    if ! VIDEO_URL=$(input_url)
+    then
+        echo "No video URL provided."
+        exit 1
+    fi
+fi
+
+OUT_DIR="${2:-""}"
+input_dir() {
+    kdialog --getexistingdirectory "$HOME/Videos"
+}
+if [ "$OUT_DIR" == "" ]
+then
+    if ! OUT_DIR=$(input_dir)
+    then
+        echo "Operation canceled by user."
+        exit 1
+    fi
+fi
+
+cd "$OUT_DIR" || {
+    kdialog --error "Cannot enter output directory '$OUT_DIR' ."
+    exit 1
+}
+
+TMP_FILE=$(mktemp "yt-dlp-wrapper.XXXXXXXXXX.sh")
+
+echo -n "#!/bin/bash
+echo '[video] $VIDEO_URL'
+echo '[output] $OUT_DIR'
+echo ''
+if yt-dlp --no-playlist '$VIDEO_URL'
+then
+    echo ''
+    echo 'Download completed!'
+    kdialog --passivepopup 'Download completed!' 5 --title yt-dlp-wrapper --icon dialog-ok
+fi
+read
+" > "$TMP_FILE"
+
+konsole -e bash "$TMP_FILE"
+
+rm "$TMP_FILE"

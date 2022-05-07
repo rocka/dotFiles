@@ -74,7 +74,8 @@ some dotFiles, of my own
 │   │   ├── color-test         // test terminal colors
 │   │   ├── kwindesktopctl     // script to switch virtual desktop in kde
 │   │   ├── syucnt             // count how many times you've `pacman -Syu`'d
-│   │   └── yd                 // simple GUI wrapper for `ydcv`
+│   │   ├── yd                 // simple GUI wrapper for `ydcv`
+│   │   └── yt-dlp-wrapper     // `yt-dlp- GUI wrapper for clipboard actions
 │   └── share
 │       ├── solid
 │       │   └── actions        // disable gwenview's `import photos`
@@ -103,6 +104,7 @@ export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/bash/history"
 - install [touchegg][touchegg] for touchpad gestures support of libinput
 - (deprecated) [gebaar][gebaar] for gestures support of libinput
 - install package [`ydcv`][ydcv] (or [`ydcv-rs`][ydcv-rs]) and [`kdialog`][kdialog] before using the script `yd`
+- install package [`yt-dlp`][yt-dlp] and [`kdialog`][kdialog] before using the script `yd`
 - Yakuake theme: a modified version of [Breeze Prefect Dark][yakuake-theme]
 - install [powerline][powerline] to use powerline in tmux & bash
 - install [powerline-vim][powerline-vim] to use powerline in vim
@@ -119,6 +121,7 @@ export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/bash/history"
 [ydcv]: https://www.archlinux.org/packages/community/any/ydcv/
 [ydcv-rs]: https://aur.archlinux.org/packages/ydcv-rs/
 [kdialog]: https://www.archlinux.org/packages/extra/x86_64/kdialog/
+[yt-dlp]: https://archlinux.org/packages/community/any/yt-dlp/
 [yakuake-theme]: https://store.kde.org/p/1193435/
 [powerline]: https://www.archlinux.org/packages/community/x86_64/powerline/
 [powerline-vim]: https://www.archlinux.org/packages/community/x86_64/powerline-vim/
