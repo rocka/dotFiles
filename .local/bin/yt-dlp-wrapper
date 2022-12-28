@@ -32,7 +32,7 @@ cd "$OUT_DIR" || {
     exit 1
 }
 
-TMP_FILE=$(mktemp "yt-dlp-wrapper.XXXXXXXXXX.sh")
+TMP_FILE=$(mktemp --tmpdir "yt-dlp-wrapper.XXXXXXXXXX.sh")
 
 echo -n "#!/bin/bash
 echo '[video] $VIDEO_URL'
