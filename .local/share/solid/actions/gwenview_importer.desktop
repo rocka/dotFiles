@@ -1,1 +1,8 @@
+[Desktop Entry]
+Type=Service
+Actions=open;
 
+[Desktop Action open]
+Icon=action-unavailable-symbolic
+Name=Download Photos with Gwenview (Hidden)
+Hidden=true
