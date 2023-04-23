@@ -1,2 +1,2 @@
 #!/bin/bash
-notify-send -i state-download 'Aria2: Download Started' "Task GID: $1"
+notify-send --app-name=aria2 --icon=state-download 'Sownload Started' "Task GID: $1"

@@ -8,9 +8,9 @@ some dotFiles, of my own
 │   ├── alacritty
 │   │   └── alacritty.yml
 │   ├── aria2
-│   │   ├── conf.ini           // aria2 websocket JSON RPC and event hooks
+│   │   ├── aria2.conf         // aria2 websocket JSON RPC and event hooks
 │   │   ├── download-error.sh
-│   │   ├── download-finish.sh
+│   │   ├── download-complete.sh
 │   │   └── download-start.sh
 │   ├── autostart
 │   ├── bash

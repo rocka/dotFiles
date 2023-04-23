@@ -1,2 +1,2 @@
 #!/bin/bash
-notify-send -i state-error 'Aria2: Download Errored' "Task GID: $1"
+notify-send --app-name=aria2 --icon=state-error 'Download Failed' "Task GID: $1"
