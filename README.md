@@ -14,6 +14,8 @@ some dotFiles, of my own
 │   │   └── download-start.sh
 │   ├── autostart
 │   ├── bash
+│   ├── environment.d
+│   │   └── pam                // environment variables
 │   ├── fish
 │   │   ├── conf.d
 │   │   │   └── rocka.fish     // fish shell alias
@@ -81,7 +83,6 @@ some dotFiles, of my own
 │       │   └── actions        // disable gwenview's `import photos`
 │       └── yakuake
 │           └── skins
-├── .pam_environment           // environment variables
 ├── LICENSE                    // WTFPL
 └── README.md
 ```
@@ -97,6 +98,13 @@ RCFILE="${XDG_CONFIG_HOME:-$HOME/.local/share}/bash/bashrc"
 unset RCFILE
 
 export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/bash/history"
+```
+
+- let `pam_env` read user env file:
+
+```
+# /etc/pam.d/system-login
+session    required   pam_env.so           user_readenv=1 user_envfile=.config/environment.d/pam
 ```
 
 - fonts needed in my fontconfig: [`noto-fonts`][noto], [`noto-fonts-cjk`][noto-cjk], [`ttf-hack`][hack], [`ttf-droid-monovar`][droid-monovar]<sup>AUR</sup>, [`noto-fonts-emoji-blob`][blobmoji]<sup>AUR</sup>

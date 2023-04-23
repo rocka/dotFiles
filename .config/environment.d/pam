@@ -9,7 +9,7 @@ EDITOR=nvim
 PATH DEFAULT=@{HOME}/.local/bin:${PATH}
 
 # Xauthority
-XAUTHORITY DEFAULT=${XDG_RUNTIME_DIR}/Xauthority
+#XAUTHORITY DEFAULT=${XDG_RUNTIME_DIR}/Xauthority
 
 # Fcitx IM
 GTK_IM_MODULE=fcitx
@@ -37,17 +37,18 @@ XDG_CACHE_HOME  DEFAULT=@{HOME}/.cache
 XDG_STATE_HOME  DEFAULT=@{HOME}/.local/state
 XDG_DATA_HOME   DEFAULT=@{HOME}/.local/share
 
+GTK_RC_FILES            DEFAULT=${XDG_CONFIG_HOME}/gtkrc
+GTK2_RC_FILES           DEFAULT=${XDG_CONFIG_HOME}/gtkrc-2.0
 NODE_REPL_HISTORY       DEFAULT=${XDG_STATE_HOME}/node/node_repl_history
 NPM_CONFIG_USERCONFIG   DEFAULT=${XDG_CONFIG_HOME}/npm/npmrc
 PYTHONSTARTUP           DEFAULT=${XDG_CONFIG_HOME}/python/init.py
 ANDROID_SDK_ROOT        DEFAULT=@{HOME}/Software/AndroidSDK
 ANDROID_PREFS_ROOT      DEFAULT=${XDG_DATA_HOME}/android
 ANDROID_EMULATOR_HOME   DEFAULT=${XDG_DATA_HOME}/android/emulator
-JAVA_TOOL_OPTIONS       DEFAULT="-Djava.util.prefs.userRoot=${XDG_DATA_HOME}/java -Dsun.java2d.uiScale=2 -Dawt.useSystemAAFontSettings=on"
+JAVA_TOOL_OPTIONS       DEFAULT="-Djava.util.prefs.userRoot=${XDG_DATA_HOME}/java -Dsun.java2d.uiScale=2 -Dawt.useSystemAAFontSettings=on -XX:-UsePerfData"
 GRADLE_USER_HOME        DEFAULT=${XDG_DATA_HOME}/gradle
 VSCODE_PORTABLE         DEFAULT=${XDG_DATA_HOME}/vscode
 PARALLEL_HOME           DEFAULT=${XDG_DATA_HOME}/parallel
-KDEHOME                 DEFAULT=${XDG_CONFIG_HOME}/kde
 OCTAVE_HISTFILE         DEFAULT=${XDG_STATE_HOME}/octave/octave_hist
 OCTAVE_SITE_INITFIL     DEFAULT=${XDG_CONFIG_HOME}/octave/octaverc
 TEXMFVAR                DEFAULT=${XDG_CACHE_HOME}/texlive/texmf-var
