@@ -68,7 +68,8 @@ some dotFiles, of my own
 │   ├── yay
 │   │   └── config.json
 │   ├── chromium-flags.conf    // vaapi and overlay scrollbars
-│   ├── kmsserverrc            // disable session restore
+│   ├── ksmserverrc            // disable session restore
+│   ├── kwinrc
 │   ├── plasmashellrc          // clipboard actions
 │   ├── user-dirs.dirs
 │   └── user-dirs.locale

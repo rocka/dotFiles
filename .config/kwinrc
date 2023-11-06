@@ -1,0 +1,25 @@
+# 2x2 vritual desktop layout
+[Desktops]
+Id_1=c4e5120e-6e93-40b7-99e9-79dd7295b470
+Id_2=9efa4179-5bc3-44c7-943b-d464a42cdc95
+Id_3=ac37f882-de64-4ea8-8e4a-05cde7891cc2
+Id_4=7cab3ef4-bbe6-4a3b-8855-d5905196de48
+Name_1=[0 0]
+Name_2=[1 0]
+Name_3=[0 1]
+Name_4=[1 1]
+Number=4
+Rows=2
+
+# disable screen edge highlight effect
+[Plugins]
+screenedgeEnabled=false
+
+# use fcitx5 on wayland
+[Wayland]
+InputMethod[$e]=/usr/share/applications/org.fcitx.Fcitx5.desktop
+VirtualKeyboardEnabled=true
+
+# hide titlebar for maximized windows
+[Windows]
+BorderlessMaximizedWindows=true
