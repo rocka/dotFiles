@@ -1,0 +1,26 @@
+[Desktop Entry]
+Name=Thunderbird
+Comment=Send and receive mail with Thunderbird
+Comment[zh_CN]=阅读邮件或新闻
+GenericName=Mail Client
+GenericName[zh_CN]=邮件新闻客户端
+Exec=thunderbird %u
+Terminal=false
+Type=Application
+Icon=org.mozilla.Thunderbird
+Categories=Network;Email;
+MimeType=message/rfc822;x-scheme-handler/mailto;application/x-xpinstall;
+StartupNotify=true
+Actions=ComposeMessage;OpenAddressBook;
+
+[Desktop Action ComposeMessage]
+Name=Write new message
+Name[zh_CN]=编写新消息
+Icon=mail-message-new
+Exec=thunderbird -compose
+
+[Desktop Action OpenAddressBook]
+Name=Open address book
+Name[zh_CN]=打开通讯录
+Icon=address-book-new
+Exec=thunderbird -addressbook

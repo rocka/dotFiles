@@ -1,0 +1,19 @@
+[Action_0]
+Automatic=true
+Description=Youtube Video
+Number of commands=2
+Regexp=youtube\\.com/watch\\?v=|youtu\\.be|youtube\\.com/shorts/
+
+[Action_0/Command_0]
+Commandline[$e]=mpv %s
+Description=Play in mpv
+Enabled=true
+Icon=mpv
+Output=0
+
+[Action_0/Command_1]
+Commandline[$e]=yt-dlp-wrapper %s
+Description=Download Video
+Enabled=true
+Icon=download
+Output=0

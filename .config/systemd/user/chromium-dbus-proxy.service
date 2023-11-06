@@ -1,0 +1,37 @@
+[Unit]
+Description=XDG DBus Proxy instance for chromium
+
+[Service]
+Type=simple
+# if only we can just deny or fake org.freedesktop.portal.Settings.Read
+ExecStart=/usr/bin/xdg-dbus-proxy \
+    ${DBUS_SESSION_BUS_ADDRESS} %t/chromium-dbus-proxy \
+    --filter \
+    --own=org.mpris.MediaPlayer2.plasma-browser-integration.* \
+    --own=org.kde.plasma.browser_integration.* \
+    --talk=org.kde.plasma.browser_integration \
+    --talk=org.kde.kwalletd5 \
+    --talk=org.kde.kdeconnect \
+    --talk=org.kde.KWin \
+    --talk=org.kde.KIOFuse \
+    --talk=org.kde.ActivityManager \
+    --talk=org.gtk.Settings \
+    --talk=org.freedesktop.FileManager1 \
+    --talk=org.freedesktop.Notifications \
+    --talk=org.freedesktop.PowerManagement \
+    --talk=org.freedesktop.ScreenSaver \
+    --talk=com.canonical.AppMenu.Registrar \
+    --talk=org.gnome.SessionManager \
+    --talk=org.a11y.Bus \
+    --talk=org.fcitx.* \
+    --talk=org.freedesktop.portal.Fcitx \
+    --see=org.freedesktop.portal.Desktop \
+    --broadcast=org.freedesktop.portal.*=@/* \
+    --call=org.freedesktop.portal.Desktop=org.freedesktop.DBus.Properties.*@/* \
+    --call=org.freedesktop.portal.Desktop=org.freedesktop.portal.Session.*@/* \
+    --call=org.freedesktop.portal.Desktop=org.freedesktop.portal.ScreenCast.*@/* \
+    --call=org.freedesktop.portal.Desktop=org.freedesktop.portal.FileChooser.*@/* \
+    --call=org.freedesktop.portal.Desktop=org.freedesktop.portal.OpenURI.*@/*
+
+[Install]
+WantedBy=default.target

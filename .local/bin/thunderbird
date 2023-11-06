@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#export LANG=zh_CN.UTF-8
+#export GTK_USE_PORTAL=1
+export GTK_THEME=Arc-Darker-solid
+export MOZ_ENABLE_WAYLAND=1
+export MOZ_USE_XINPUT2=1
+
+exec /usr/lib/thunderbird/thunderbird $@

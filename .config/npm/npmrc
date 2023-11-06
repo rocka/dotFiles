@@ -1,5 +1,6 @@
 prefix=${HOME}/.local
 tmp=${XDG_RUNTIME_DIR}/npm
+cache=${XDG_CACHE_HOME}/npm
 
 sign-git-tag=true
 update-notifier=false

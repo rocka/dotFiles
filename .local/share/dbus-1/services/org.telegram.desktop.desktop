@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=org.telegram.desktop
+Exec=/home/rocka/.local/bin/telegram-desktop

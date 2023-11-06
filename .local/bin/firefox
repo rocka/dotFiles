@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#export LANG=zh_CN.UTF-8
+#export GTK_USE_PORTAL=1
+export GTK_THEME=Arc-Darker-solid
+export MOZ_ENABLE_WAYLAND=1
+export MOZ_USE_XINPUT2=1
+#export MOZ_X11_EGL=1
+#export MOZ_DISABLE_RDD_SANDBOX=1
+
+exec /usr/bin/firefox $@

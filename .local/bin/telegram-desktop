@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#export LD_LIBRARY_PATH=/opt/telegram-desktop-libs
+# https://wiki.archlinux.org/title/Telegram#KDE_dialogs_in_Telegram_Desktop
+export QT_QPA_PLATFORMTHEME=xdgdesktopportal
+exec /usr/bin/telegram-desktop $@

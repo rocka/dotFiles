@@ -2,7 +2,7 @@
 # The parser is also very primitive, and not human-friendly.
 htop_version=3.2.2
 config_reader_min_version=3
-fields=0 48 17 18 2 39 40 46 49 1
+fields=0 48 17 18 2 40 39 119 46 49 1
 hide_kernel_threads=1
 hide_userland_threads=1
 hide_running_in_container=0
@@ -45,7 +45,7 @@ sort_direction=-1
 tree_sort_direction=-1
 tree_view_always_by_pid=0
 all_branches_collapsed=0
-screen:Main=PID USER PRIORITY NICE STATE M_RESIDENT M_SHARE PERCENT_CPU TIME Command
+screen:Main=PID USER PRIORITY NICE STATE M_SHARE M_RESIDENT M_SWAP PERCENT_CPU TIME Command
 .sort_key=M_RESIDENT
 .tree_sort_key=PID
 .tree_view=1
