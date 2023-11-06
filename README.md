@@ -134,11 +134,27 @@ some dotFiles, of my own
 - install [powerline][powerline] to use powerline in tmux & bash
 - install [powerline-vim][powerline-vim] to use powerline in vim
 - install [vim-airline][vim-airline] and [vim-airline-themes][vim-airline-themes] to use airline in neovim
-- which plasma config file to find: [shalva97/kde-configuration-files(https://github.com/shalva97/kde-configuration-files)
+- which KDE Plasma config file to find: [shalva97/kde-configuration-files](https://github.com/shalva97/kde-configuration-files)
 - KWin hide titlebar for maximized windows:
 
     ```bash
     kwriteconfig5 --file ~/.config/kwinrc --group Windows --key BorderlessMaximizedWindows true
+    qdbus org.kde.KWin /KWin reconfigure
+    ```
+
+- KDE Plasma toggle widgets "locked" state
+
+    ```bash
+    qdbus org.kde.plasmashell /PlasmaShell evaluateScript "lockCorona(!locked)"
+    ```
+
+- KDE Plasma change "Meta" key behavior
+
+    ```bash
+    # default behavior, open application launcher
+    kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.plasmashell,/PlasmaShell,org.kde.PlasmaShell,activateLauncherMenu"
+    # activate "Overview" effect
+    kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,Overview"
     qdbus org.kde.KWin /KWin reconfigure
     ```
 
