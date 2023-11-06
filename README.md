@@ -16,10 +16,14 @@ some dotFiles, of my own
 │   ├── bash
 │   ├── environment.d
 │   │   └── pam                // environment variables
+│   ├── fcitx5
+│   │   └── conf
+│   │       └── clipboard.conf // clipboard paste primary
 │   ├── fish
 │   │   ├── conf.d
 │   │   │   └── rocka.fish     // fish shell alias
-│   │   └── fish_plugins       // fisher packages
+│   │   ├── fish_plugins       // fisher packages
+│   │   └── fish_variables     // color scheme
 │   ├── fontconfig
 │   │   ├── conf.d
 │   │   │   ├── 10-replace.conf
@@ -51,6 +55,7 @@ some dotFiles, of my own
 │   ├── systemd                // systemd user service
 │   │   └── user
 │   │       ├── aria2.service
+│   │       ├── chromium-dbus-proxy.service // prevent chromium from using dark mode
 │   │       └── ssh-agent.service
 │   ├── tmux
 │   │   └── tmux.conf          // minial powerline-enabled tmux config
@@ -63,6 +68,8 @@ some dotFiles, of my own
 │   ├── yay
 │   │   └── config.json
 │   ├── chromium-flags.conf    // vaapi and overlay scrollbars
+│   ├── kmsserverrc            // disable session restore
+│   ├── plasmashellrc          // clipboard actions
 │   ├── user-dirs.dirs
 │   └── user-dirs.locale
 ├── .gnupg
@@ -73,13 +80,22 @@ some dotFiles, of my own
 │   ├── bin                    // global `bin`
 │   │   ├── aria2-dl           // CLI tool for sending `aria2.addUri` to JSON RPC
 │   │   ├── btw                // print a blue Arch
+│   │   ├── chromium           // use `chromium-dbus-proxy`
 │   │   ├── color-test         // test terminal colors
+│   │   ├── firefox            // enable wayland and smooth touchpad scroll
 │   │   ├── kwindesktopctl     // script to switch virtual desktop in kde
 │   │   ├── syucnt             // count how many times you've `pacman -Syu`'d
 │   │   ├── yd                 // simple GUI wrapper for `ydcv`
+│   │   ├── telegram-desktop   // use kde dialog
+│   │   ├── thunderbird        // enable wayland and smooth touchpad scroll
 │   │   └── yt-dlp-wrapper     // `yt-dlp- GUI wrapper for clipboard actions
 │   └── share
+│       ├── applications       // modified desktop entries (for icon or description)
+│       ├── dbus-1
+│       │   └── services       // disable gwenview's `import photos`
+│       │       └── org.telegram.desktop.desktop // telegram-desktop dbus activation
 │       ├── solid
+│       ├── icons              // custom icons
 │       │   └── actions        // disable gwenview's `import photos`
 │       └── yakuake
 │           └── skins
@@ -91,37 +107,47 @@ some dotFiles, of my own
 
 - let `bash` read `~/.config/bash/bashrc`:
 
-```bash
-# /etc/bash.bashrc
-RCFILE="${XDG_CONFIG_HOME:-$HOME/.local/share}/bash/bashrc"
-[ -r $RCFILE ] && . "${RCFILE}"
-unset RCFILE
+    ```bash
+    # /etc/bash.bashrc
+    RCFILE="${XDG_CONFIG_HOME:-$HOME/.local/share}/bash/bashrc"
+    [ -r $RCFILE ] && . "${RCFILE}"
+    unset RCFILE
 
-export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/bash/history"
-```
+    export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/bash/history"
+    ```
 
 - let `pam_env` read user env file:
 
-```
-# /etc/pam.d/system-login
-session    required   pam_env.so           user_readenv=1 user_envfile=.config/environment.d/pam
-```
+    ```
+    # /etc/pam.d/system-login
+    session    required   pam_env.so           user_readenv=1 user_envfile=.config/environment.d/pam
+    ```
 
-- fonts needed in my fontconfig: [`noto-fonts`][noto], [`noto-fonts-cjk`][noto-cjk], [`ttf-hack`][hack], [`ttf-droid-monovar`][droid-monovar]<sup>AUR</sup>, [`noto-fonts-emoji-blob`][blobmoji]<sup>AUR</sup>
+- recommended fonts: [ttf-noto-vf][noto-vf]<sup>AUR</sup>, [otf-noto-sans-cjk][noto-sans-cjk]<sup>AUR</sup>, [otf-noto-serif-cjk][noto-serif-cjk]<sup>AUR</sup> ([noto-fonts-cjk][noto-cjk] is also fine), [ttf-go-noto-universal-temporal][noto-universal]<sup>AUR</sup>, [ttf-hack][hack], [noto-fonts-emoji-blob][blobmoji]<sup>AUR</sup>
 - install [fisher][fisher] before using my fish_plugins
 - install [touchegg][touchegg] for touchpad gestures support of libinput
 - (deprecated) [gebaar][gebaar] for gestures support of libinput
-- install package [`ydcv`][ydcv] (or [`ydcv-rs`][ydcv-rs]) and [`kdialog`][kdialog] before using the script `yd`
-- install package [`yt-dlp`][yt-dlp] and [`kdialog`][kdialog] before using the script `yd`
+- (deprecated) install package [`ydcv`][ydcv] (or [`ydcv-rs`][ydcv-rs]) and [`kdialog`][kdialog] before using the script `yd`
+- install package [`yt-dlp`][yt-dlp] and [`kdialog`][kdialog] before using the script `yt-dlp-wrapper`
+- some custom icons comes from [varlesh/breeze-extra](https://github.com/varlesh/breeze-extra)
 - Yakuake theme: a modified version of [Breeze Prefect Dark][yakuake-theme]
 - install [powerline][powerline] to use powerline in tmux & bash
 - install [powerline-vim][powerline-vim] to use powerline in vim
 - install [vim-airline][vim-airline] and [vim-airline-themes][vim-airline-themes] to use airline in neovim
+- which plasma config file to find: [shalva97/kde-configuration-files(https://github.com/shalva97/kde-configuration-files)
+- KWin hide titlebar for maximized windows:
 
-[noto]: https://www.archlinux.org/packages/extra/any/noto-fonts/
+    ```bash
+    kwriteconfig5 --file ~/.config/kwinrc --group Windows --key BorderlessMaximizedWindows true
+    qdbus org.kde.KWin /KWin reconfigure
+    ```
+
+[noto-vf]: https://aur.archlinux.org/pkgbase/ttf-noto-vf
 [noto-cjk]: https://www.archlinux.org/packages/extra/any/noto-fonts-cjk/
+[noto-sans-cjk]: https://aur.archlinux.org/packages/otf-noto-sans-cjk
+[noto-serif-cjk]: https://aur.archlinux.org/packages/otf-noto-serif-cjk
+[noto-universal]: https://aur.archlinux.org/packages/ttf-go-noto-universal-temporal
 [hack]: https://www.archlinux.org/packages/extra/any/ttf-hack/
-[droid-monovar]: https://aur.archlinux.org/packages/ttf-droid-monovar/
 [blobmoji]: https://aur.archlinux.org/packages/noto-fonts-emoji-blob/
 [fisher]: https://github.com/jorgebucaran/fisher
 [touchegg]: https://aur.archlinux.org/packages/touchegg/
