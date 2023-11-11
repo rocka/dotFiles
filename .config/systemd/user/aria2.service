@@ -1,10 +1,10 @@
 [Unit]
-Description=A lightweight multi-protocol & multi-source command-line download utility.
+Description=Lightweight multi-protocol & multi-source command-line download utility.
 After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/aria2c --conf=/home/rocka/.config/aria2/conf.ini
+ExecStart=/usr/bin/aria2c
 
 [Install]
 WantedBy=default.target
