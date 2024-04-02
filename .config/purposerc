@@ -1,0 +1,3 @@
+#https://invent.kde.org/frameworks/purpose/-/tree/master
+[plugins]
+disabled=bluetoothplugin,emailplugin,imgurplugin,pastebinplugin,twitterplugin
