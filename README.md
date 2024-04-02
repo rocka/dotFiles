@@ -124,9 +124,9 @@ some dotFiles, of my own
     session    required   pam_env.so           user_readenv=1 user_envfile=.config/environment.d/pam
     ```
 
-- recommended fonts: [ttf-noto-vf][noto-vf]<sup>AUR</sup>, [otf-noto-sans-cjk][noto-sans-cjk]<sup>AUR</sup>, [otf-noto-serif-cjk][noto-serif-cjk]<sup>AUR</sup> ([noto-fonts-cjk][noto-cjk] is also fine), [ttf-go-noto-universal-temporal][noto-universal]<sup>AUR</sup>, [ttf-hack][hack], [noto-fonts-emoji-blob][blobmoji]<sup>AUR</sup>
+- recommended fonts: [ttf-noto-vf][noto-vf]<sup>AUR</sup>, [otf-noto-sans-cjk][noto-sans-cjk]<sup>AUR</sup>, [otf-noto-serif-cjk][noto-serif-cjk]<sup>AUR</sup> ([noto-fonts-cjk][noto-cjk] is also fine), [ttf-go-noto-universal-temporal][noto-universal]<sup>AUR</sup>, [ttf-hack][hack], [ttf-blobmoji][blobmoji]<sup>AUR</sup>
 - install [fisher][fisher] before using my fish_plugins
-- install [touchegg][touchegg] for touchpad gestures support of libinput
+- (deprecated) install [touchegg][touchegg] for touchpad gestures support of libinput
 - (deprecated) [gebaar][gebaar] for gestures support of libinput
 - (deprecated) install package [`ydcv`][ydcv] (or [`ydcv-rs`][ydcv-rs]) and [`kdialog`][kdialog] before using the script `yd`
 - install package [`yt-dlp`][yt-dlp] and [`kdialog`][kdialog] before using the script `yt-dlp-wrapper`
@@ -165,7 +165,7 @@ some dotFiles, of my own
 [noto-serif-cjk]: https://aur.archlinux.org/packages/otf-noto-serif-cjk
 [noto-universal]: https://aur.archlinux.org/packages/ttf-go-noto-universal-temporal
 [hack]: https://www.archlinux.org/packages/extra/any/ttf-hack/
-[blobmoji]: https://aur.archlinux.org/packages/noto-fonts-emoji-blob/
+[blobmoji]: https://aur.archlinux.org/packages/ttf-blobmoji/
 [fisher]: https://github.com/jorgebucaran/fisher
 [touchegg]: https://aur.archlinux.org/packages/touchegg/
 [gebaar]: https://aur.archlinux.org/packages/gebaar/

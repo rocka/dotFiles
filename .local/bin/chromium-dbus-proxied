@@ -3,4 +3,4 @@
 export GTK_THEME=Arc-solid
 export DBUS_SESSION_BUS_ADDRESS="unix:path=$XDG_RUNTIME_DIR/chromium-dbus-proxy"
 
-exec /usr/bin/chromium $@
+exec /usr/bin/chromium "$@"

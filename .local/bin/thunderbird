@@ -6,4 +6,4 @@ export GTK_THEME=Arc-Darker-solid
 export MOZ_ENABLE_WAYLAND=1
 export MOZ_USE_XINPUT2=1
 
-exec /usr/lib/thunderbird/thunderbird $@
+exec /usr/lib/thunderbird/thunderbird "$@"
