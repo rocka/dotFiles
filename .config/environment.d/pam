@@ -29,7 +29,7 @@ SSH_ASKPASS=/usr/bin/ksshaskpass
 #QT_AUTO_SCREEN_SCALE_FACTOR=1
 
 # Plasma HiDPI Scale
-PLASMA_USE_QT_SCALING=1
+#PLASMA_USE_QT_SCALING=1
 
 # XDG Base Directory and things
 XDG_CONFIG_HOME DEFAULT=@{HOME}/.config
@@ -52,3 +52,8 @@ PARALLEL_HOME           DEFAULT=${XDG_DATA_HOME}/parallel
 OCTAVE_HISTFILE         DEFAULT=${XDG_STATE_HOME}/octave/octave_hist
 OCTAVE_SITE_INITFIL     DEFAULT=${XDG_CONFIG_HOME}/octave/octaverc
 TEXMFVAR                DEFAULT=${XDG_CACHE_HOME}/texlive/texmf-var
+CUDA_CACHE_PATH         DEFAULT=${XDG_CACHE_HOME}/nvidia/cuda
+GOPATH                  DEFAULT=${XDG_DATA_HOME}/go
+GOMODCACHE              DEFAULT=${XDG_CACHE_HOME}/go/mod
+CARGO_HOME              DEFAULT=${XDG_DATA_HOME}/cargo
+NUGET_PACKAGES          DEFAULT=${XDG_CACHE_HOME}/NuGetPackages
