@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.5
+Name=Qt D-Bus Viewer
+GenericName=D-Bus Viewer
+Comment=Introspect D-Bus objects and messages
+Icon=qdbusviewer
+Exec=qdbusviewer6
+Categories=Development;
+Keywords=qdbusviewer;
+StartupWMClass=qdbusviewer
