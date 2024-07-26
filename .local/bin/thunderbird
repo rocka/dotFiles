@@ -1,9 +1,28 @@
-#!/bin/bash
+#!/usr/bin/bash
 
-#export LANG=zh_CN.UTF-8
-#export GTK_USE_PORTAL=1
-export GTK_THEME=Arc-Darker-solid
-export MOZ_ENABLE_WAYLAND=1
-export MOZ_USE_XINPUT2=1
+BIND_ARGS=(
+    --bind "${XDG_RUNTIME_DIR}" "${XDG_RUNTIME_DIR}"
+    --bind "${XDG_CONFIG_HOME}" "${XDG_CONFIG_HOME}"
+    --bind "${XDG_CACHE_HOME}" "${XDG_CACHE_HOME}"
+    --bind "${XDG_STATE_HOME}" "${XDG_STATE_HOME}"
+    --bind "${XDG_DATA_HOME}" "${XDG_DATA_HOME}"
+    --bind "${XDG_DATA_HOME}/Thunderbird" "${HOME}/.thunderbird"
+)
 
-exec /usr/lib/thunderbird/thunderbird "$@"
+for DIR in "${HOME}"/*
+do
+    if [ -d "${DIR}" ]
+    then
+        BIND_ARGS+=(--bind "${DIR}" "${DIR}")
+    fi
+done
+
+MOZ_ENABLE_WAYLAND=1 exec bwrap \
+    --ro-bind "/" "/" \
+    --dev-bind "/dev" "/dev" \
+    --proc "/proc" \
+    --tmpfs "${HOME}" \
+    "${BIND_ARGS[@]}" \
+    --new-session \
+    --die-with-parent \
+    /usr/lib/thunderbird/thunderbird "$@"
