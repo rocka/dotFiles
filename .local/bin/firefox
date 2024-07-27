@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
 BIND_ARGS=(
+    --bind "/tmp" "/tmp"
     --bind "${XDG_RUNTIME_DIR}" "${XDG_RUNTIME_DIR}"
     --bind "${XDG_CONFIG_HOME}" "${XDG_CONFIG_HOME}"
     --bind "${XDG_CACHE_HOME}" "${XDG_CACHE_HOME}"

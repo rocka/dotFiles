@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
 BIND_ARGS=(
+    --bind "/tmp" "/tmp"
     --bind "${XDG_RUNTIME_DIR}" "${XDG_RUNTIME_DIR}"
     --bind "${XDG_CONFIG_HOME}" "${XDG_CONFIG_HOME}"
     --bind "${XDG_CACHE_HOME}" "${XDG_CACHE_HOME}"
@@ -17,12 +18,13 @@ do
     fi
 done
 
-MOZ_ENABLE_WAYLAND=1 exec bwrap \
+exec bwrap \
     --ro-bind "/" "/" \
     --dev-bind "/dev" "/dev" \
     --proc "/proc" \
     --tmpfs "${HOME}" \
     "${BIND_ARGS[@]}" \
+    --setenv MOZ_ENABLE_WAYLAND 1 \
     --new-session \
     --die-with-parent \
     /usr/lib/thunderbird/thunderbird "$@"
