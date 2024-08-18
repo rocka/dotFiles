@@ -1,6 +1,6 @@
 # dotFiles
 
-some dotFiles, of my own
+home, sweet `$HOME`
 
 ```js
 .
@@ -14,6 +14,7 @@ some dotFiles, of my own
 │   │   └── download-start.sh
 │   ├── autostart
 │   ├── bash
+│   │   └── bashrc             // bash alias
 │   ├── environment.d
 │   │   └── pam                // environment variables
 │   ├── fcitx5
@@ -40,13 +41,15 @@ some dotFiles, of my own
 │   ├── htop
 │   │   └── htoprc
 │   ├── mpv
-│   │   └── mpv.conf
+│   │   └── mpv.conf           // hwdec, window size, screenshot file name, etc
 │   ├── npm
 │   │   └── npmrc              // npm local prefix
 │   ├── nvim                   // neovim
 │   │   └── init.vim
 │   ├── octave
 │   │   └── octaverc
+│   ├── Phonon
+│   │   └── mpv.conf           // hwdec for phonon-mpv
 │   ├── powerline
 │   │   └── themes
 │   │       └── tmux           // powerline segments in tmux
@@ -67,10 +70,13 @@ some dotFiles, of my own
 │   │   └── config
 │   ├── yay
 │   │   └── config.json
-│   ├── chromium-flags.conf    // vaapi and overlay scrollbars
+│   ├── chromium-flags.conf    // kwallet, overlay scrollbars, vaapi, ozone wayland
+│   ├── code-flags.conf        // -> electron-flags.conf
+│   ├── electron-flags.conf    // ozone wayland
 │   ├── ksmserverrc            // disable session restore
 │   ├── kwinrc
 │   ├── plasmashellrc          // clipboard actions
+│   ├── purposerc              // cleanup kde's share menu
 │   ├── user-dirs.dirs
 │   └── user-dirs.locale
 ├── .gnupg
@@ -81,22 +87,27 @@ some dotFiles, of my own
 │   ├── bin                    // global `bin`
 │   │   ├── aria2-dl           // CLI tool for sending `aria2.addUri` to JSON RPC
 │   │   ├── btw                // print a blue Arch
-│   │   ├── chromium           // use `chromium-dbus-proxy`
+│   │   ├── chromium-dbus-proxied // use `chromium-dbus-proxy`
 │   │   ├── color-test         // test terminal colors
-│   │   ├── firefox            // enable wayland and smooth touchpad scroll
+│   │   ├── firefox            // bwrap ~/.mozilla
+│   │   ├── krita              // im module and xwayland scalling
 │   │   ├── kwindesktopctl     // script to switch virtual desktop in kde
 │   │   ├── syucnt             // count how many times you've `pacman -Syu`'d
-│   │   ├── yd                 // simple GUI wrapper for `ydcv`
 │   │   ├── telegram-desktop   // use kde dialog
-│   │   ├── thunderbird        // enable wayland and smooth touchpad scroll
-│   │   └── yt-dlp-wrapper     // `yt-dlp- GUI wrapper for clipboard actions
+│   │   ├── thunderbird        // bwrap ~/.thunderbird, enable wayland
+│   │   ├── yd                 // simple GUI wrapper for `ydcv`
+│   │   └── yt-dlp-wrapper     // `yt-dlp` GUI wrapper for clipboard actions
 │   └── share
 │       ├── applications       // modified desktop entries (for icon or description)
 │       ├── dbus-1
-│       │   └── services       // disable gwenview's `import photos`
+│       │   └── services
 │       │       └── org.telegram.desktop.desktop // telegram-desktop dbus activation
-│       ├── solid
 │       ├── icons              // custom icons
+│       ├── kio
+│       │   └── servicemenus
+│       │       └── unzip.desktop // unzip as gbk or jis in dophin
+│       ├── konsole            // konsole color schemes
+│       ├── solid
 │       │   └── actions        // disable gwenview's `import photos`
 │       └── yakuake
 │           └── skins
@@ -124,11 +135,17 @@ some dotFiles, of my own
     session    required   pam_env.so           user_readenv=1 user_envfile=.config/environment.d/pam
     ```
 
-- recommended fonts: [ttf-noto-vf][noto-vf]<sup>AUR</sup>, [otf-noto-sans-cjk][noto-sans-cjk]<sup>AUR</sup>, [otf-noto-serif-cjk][noto-serif-cjk]<sup>AUR</sup> ([noto-fonts-cjk][noto-cjk] is also fine), [ttf-go-noto-universal-temporal][noto-universal]<sup>AUR</sup>, [ttf-hack][hack], [ttf-blobmoji][blobmoji]<sup>AUR</sup>
+- recommended fonts:
+  - latin: [ttf-roboto][roboto], [ttf-noto-vf][noto-vf]<sup>AUR</sup>
+  - cjk: [otf-noto-sans-cjk][noto-sans-cjk]<sup>AUR</sup>, [otf-noto-serif-cjk][noto-serif-cjk]<sup>AUR</sup> ([noto-fonts-cjk][noto-cjk] is also fine)
+  - fallback: [ttf-noto-megamerge][noto-megamerge]<sup>AUR</sup> (get rid of endless "Noto Sans *" in font selection menu)
+  - monospace: [ttf-hack][hack]
+  - emoji: [ttf-blobmoji][blobmoji]<sup>AUR</sup>
 - install [fisher][fisher] before using my fish_plugins
+- install [phonon-mpv-git][phonon] to get rid of vlc in KDE 6
 - (deprecated) install [touchegg][touchegg] for touchpad gestures support of libinput
 - (deprecated) [gebaar][gebaar] for gestures support of libinput
-- (deprecated) install package [`ydcv`][ydcv] (or [`ydcv-rs`][ydcv-rs]) and [`kdialog`][kdialog] before using the script `yd`
+- install [`ydcv-rs`][ydcv-rs] and [`kdialog`][kdialog] before using the script `yd`
 - install package [`yt-dlp`][yt-dlp] and [`kdialog`][kdialog] before using the script `yt-dlp-wrapper`
 - some custom icons comes from [varlesh/breeze-extra](https://github.com/varlesh/breeze-extra)
 - Yakuake theme: a modified version of [Breeze Prefect Dark][yakuake-theme]
@@ -139,34 +156,36 @@ some dotFiles, of my own
 - KWin hide titlebar for maximized windows:
 
     ```bash
-    kwriteconfig5 --file ~/.config/kwinrc --group Windows --key BorderlessMaximizedWindows true
-    qdbus org.kde.KWin /KWin reconfigure
+    kwriteconfig6 --file ~/.config/kwinrc --group Windows --key BorderlessMaximizedWindows true
+    qdbus6 org.kde.KWin /KWin reconfigure
     ```
 
 - KDE Plasma toggle widgets "locked" state
 
     ```bash
-    qdbus org.kde.plasmashell /PlasmaShell evaluateScript "lockCorona(!locked)"
+    qdbus6 org.kde.plasmashell /PlasmaShell evaluateScript "lockCorona(!locked)"
     ```
 
 - KDE Plasma change "Meta" key behavior
 
     ```bash
     # default behavior, open application launcher
-    kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.plasmashell,/PlasmaShell,org.kde.PlasmaShell,activateLauncherMenu"
+    kwriteconfig6 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.plasmashell,/PlasmaShell,org.kde.PlasmaShell,activateLauncherMenu"
     # activate "Overview" effect
-    kwriteconfig5 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,Overview"
-    qdbus org.kde.KWin /KWin reconfigure
+    kwriteconfig6 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,Overview"
+    qdbus6 org.kde.KWin /KWin reconfigure
     ```
 
+[roboto]: https://archlinux.org/packages/extra/any/ttf-roboto/
 [noto-vf]: https://aur.archlinux.org/pkgbase/ttf-noto-vf
 [noto-cjk]: https://www.archlinux.org/packages/extra/any/noto-fonts-cjk/
 [noto-sans-cjk]: https://aur.archlinux.org/packages/otf-noto-sans-cjk
 [noto-serif-cjk]: https://aur.archlinux.org/packages/otf-noto-serif-cjk
-[noto-universal]: https://aur.archlinux.org/packages/ttf-go-noto-universal-temporal
+[noto-megamerge]: https://aur.archlinux.org/packages/ttf-noto-megamerge
 [hack]: https://www.archlinux.org/packages/extra/any/ttf-hack/
 [blobmoji]: https://aur.archlinux.org/packages/ttf-blobmoji/
 [fisher]: https://github.com/jorgebucaran/fisher
+[phonon]: https://github.com/archlinuxcn/repo/tree/master/archlinuxcn/phonon-mpv-git
 [touchegg]: https://aur.archlinux.org/packages/touchegg/
 [gebaar]: https://aur.archlinux.org/packages/gebaar/
 [ydcv]: https://www.archlinux.org/packages/community/any/ydcv/
