@@ -188,7 +188,6 @@ home, sweet `$HOME`
 [phonon]: https://github.com/archlinuxcn/repo/tree/master/archlinuxcn/phonon-mpv-git
 [touchegg]: https://aur.archlinux.org/packages/touchegg/
 [gebaar]: https://aur.archlinux.org/packages/gebaar/
-[ydcv]: https://www.archlinux.org/packages/community/any/ydcv/
 [ydcv-rs]: https://aur.archlinux.org/packages/ydcv-rs/
 [kdialog]: https://www.archlinux.org/packages/extra/x86_64/kdialog/
 [yt-dlp]: https://archlinux.org/packages/community/any/yt-dlp/
