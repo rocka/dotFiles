@@ -1,0 +1,10 @@
+#!/bin/bash
+
+APPID="$1"
+CMD="$2"
+
+export STEAM_COMPAT_CLIENT_INSTALL_PATH="${XDG_DATA_HOME:-$HOME/.local/share}/Steam"
+export STEAM_COMPAT_DATA_PATH="$STEAM_COMPAT_CLIENT_INSTALL_PATH/steamapps/compatdata/$APPID"
+export WINEPREFIX="$STEAM_COMPAT_DATA_PATH/pfx"
+
+exec "$STEAM_COMPAT_CLIENT_INSTALL_PATH/steamapps/common/Proton - Experimental/proton" run "$CMD"

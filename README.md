@@ -92,6 +92,7 @@ home, sweet `$HOME`
 │   │   ├── firefox            // bwrap ~/.mozilla
 │   │   ├── krita              // im module and xwayland scalling
 │   │   ├── kwindesktopctl     // script to switch virtual desktop in kde
+│   │   ├── proton-run         // run command within proton wine prefix
 │   │   ├── syucnt             // count how many times you've `pacman -Syu`'d
 │   │   ├── telegram-desktop   // use kde dialog
 │   │   ├── thunderbird        // bwrap ~/.thunderbird, enable wayland
