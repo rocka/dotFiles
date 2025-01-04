@@ -41,6 +41,9 @@ home, sweet `$HOME`
 │   ├── htop
 │   │   └── htoprc
 │   ├── mpv
+│   │   └── script-opts
+│   │   │   └── uosc.conf      // uosc subtiltes and stats button
+│   │   ├── input.conf         // shortcuts
 │   │   └── mpv.conf           // hwdec, window size, screenshot file name, etc
 │   ├── npm
 │   │   └── npmrc              // npm local prefix
@@ -143,6 +146,7 @@ home, sweet `$HOME`
   - monospace: [ttf-hack][hack]
   - emoji: [ttf-blobmoji][blobmoji]<sup>AUR</sup>
 - install [fisher][fisher] before using my fish_plugins
+- install [uosc][uosc] (and [thumbfast][thumbfast]) for mpv customization
 - install [phonon-mpv-git][phonon] to get rid of vlc in KDE 6
 - (deprecated) install [touchegg][touchegg] for touchpad gestures support of libinput
 - (deprecated) [gebaar][gebaar] for gestures support of libinput
@@ -186,6 +190,8 @@ home, sweet `$HOME`
 [hack]: https://www.archlinux.org/packages/extra/any/ttf-hack/
 [blobmoji]: https://aur.archlinux.org/packages/ttf-blobmoji/
 [fisher]: https://github.com/jorgebucaran/fisher
+[uosc]: https://github.com/tomasklaen/uosc
+[thumbfast]: https://github.com/po5/thumbfast
 [phonon]: https://github.com/archlinuxcn/repo/tree/master/archlinuxcn/phonon-mpv-git
 [touchegg]: https://aur.archlinux.org/packages/touchegg/
 [gebaar]: https://aur.archlinux.org/packages/gebaar/
