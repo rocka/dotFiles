@@ -57,3 +57,4 @@ GOPATH                  DEFAULT=${XDG_DATA_HOME}/go
 GOMODCACHE              DEFAULT=${XDG_CACHE_HOME}/go/mod
 CARGO_HOME              DEFAULT=${XDG_DATA_HOME}/cargo
 NUGET_PACKAGES          DEFAULT=${XDG_CACHE_HOME}/NuGetPackages
+GNUPGHOME               DEFAULT=${XDG_DATA_HOME}/gnupg
