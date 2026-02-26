@@ -1,0 +1,7 @@
+[Show]
+kfileitem#group=true
+kfileitem#owner=true
+kfileitem#permissions=true
+rating=false
+tags=false
+userComment=false

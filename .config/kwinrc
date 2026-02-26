@@ -13,13 +13,29 @@ Rows=2
 
 # disable screen edge highlight effect
 [Plugins]
+scaleEnabled=false
 screenedgeEnabled=false
+shakecursorEnabled=false
+zoomEnabled=false
+
+# alt-tab switcher
+[TabBox]
+LayoutName=sidebar
+
+[TabBoxAlternative]
+HighlightWindows=false
+ShowTabBox=false
 
 # use fcitx5 on wayland
 [Wayland]
-InputMethod[$e]=/usr/share/applications/org.fcitx.Fcitx5.desktop
+InputMethod=/usr/share/applications/org.fcitx.Fcitx5.desktop
 VirtualKeyboardEnabled=true
 
 # hide titlebar for maximized windows
 [Windows]
 BorderlessMaximizedWindows=true
+
+# window buttons order
+[org.kde.kdecoration2]
+ButtonsOnLeft=XAI
+ButtonsOnRight=

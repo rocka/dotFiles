@@ -1,0 +1,17 @@
+[Show]
+filelight=false
+kactivitymanagerd_fileitem_linking_plugin=false
+kleodecryptverifyfiles=false
+kleoencryptfiles=false
+kleoencryptfolder=false
+kleoencryptsignfiles=false
+kleosignencryptfolder=false
+kleosignfilescms=false
+kleosignfilesopenpgp=false
+plasmavaultfileitemaction=false
+runInKonsole=false
+setfoldericonitemaction=false
+sharefileitemaction=false
+slideshowfileitemaction=false
+tagsfileitemaction=false
+wallpaperfileitemaction=false
