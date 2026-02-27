@@ -73,19 +73,20 @@ home, sweet `$HOME`
 │   │   └── config
 │   ├── yay
 │   │   └── config.json
+│   ├── baloofileinformationrc // disable rating/tags/comment in dolphin hover tooltip
+│   ├── baloofilerc            // disable baloo search index
 │   ├── chromium-flags.conf    // kwallet, overlay scrollbars, vaapi, ozone wayland
 │   ├── code-flags.conf        // -> electron-flags.conf
 │   ├── electron-flags.conf    // ozone wayland
+│   ├── kded5rc                // disable some background service
+│   ├── kservicemenurc         // remove some right-click menu items in dolphin
 │   ├── ksmserverrc            // disable session restore
 │   ├── kwinrc
+│   ├── plasma-localerc        // LC_TIME=en_SE.UTF-8 for ISO8601 datetime format
 │   ├── plasmashellrc          // clipboard actions
 │   ├── purposerc              // cleanup kde's share menu
 │   ├── user-dirs.dirs
 │   └── user-dirs.locale
-├── .gnupg
-│   ├── dirmngr.conf           // openpgp key server
-│   ├── gpg-agent.conf
-│   └── gpg.conf
 ├── .local
 │   ├── bin                    // global `bin`
 │   │   ├── aria2-dl           // CLI tool for sending `aria2.addUri` to JSON RPC
@@ -106,10 +107,14 @@ home, sweet `$HOME`
 │       ├── dbus-1
 │       │   └── services
 │       │       └── org.telegram.desktop.desktop // telegram-desktop dbus activation
+│       ├── gnupg
+│       │   ├── dirmngr.conf   // openpgp key server
+│       │   ├── gpg-agent.conf
+│       │   └── gpg.conf
 │       ├── icons              // custom icons
 │       ├── kio
 │       │   └── servicemenus
-│       │       └── unzip.desktop // unzip as gbk or jis in dophin
+│       │       └── unzip.desktop // unzip as gbk or jis in dolphin
 │       ├── konsole            // konsole color schemes
 │       ├── solid
 │       │   └── actions        // disable gwenview's `import photos`
