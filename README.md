@@ -166,7 +166,7 @@ home, sweet `$HOME`
 - KWin hide titlebar for maximized windows:
 
     ```bash
-    kwriteconfig6 --file ~/.config/kwinrc --group Windows --key BorderlessMaximizedWindows true
+    kwriteconfig6 --file kwinrc --group Windows --key BorderlessMaximizedWindows true
     qdbus6 org.kde.KWin /KWin reconfigure
     ```
 
@@ -180,10 +180,19 @@ home, sweet `$HOME`
 
     ```bash
     # default behavior, open application launcher
-    kwriteconfig6 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.plasmashell,/PlasmaShell,org.kde.PlasmaShell,activateLauncherMenu"
+    kwriteconfig6 --file kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.plasmashell,/PlasmaShell,org.kde.PlasmaShell,activateLauncherMenu"
     # activate "Overview" effect
-    kwriteconfig6 --file ~/.config/kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,Overview"
+    kwriteconfig6 --file kwinrc --group ModifierOnlyShortcuts --key Meta "org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,Overview"
     qdbus6 org.kde.KWin /KWin reconfigure
+    ```
+
+- KWin Wayland enable fcitx5 input method
+
+    ```bash
+    # set fcitx5 as "virtual keyboard"
+    kwriteconfig6 --notify --file kwinrc --group Wayland --key InputMethod '/usr/share/applications/fcitx5-wayland-launcher.desktop'
+    # enable "virtual keyboard" support
+    qdbus6 org.kde.KWin /VirtualKeyboard org.kde.kwin.VirtualKeyboard.enabled true
     ```
 
 [roboto]: https://archlinux.org/packages/extra/any/ttf-roboto/
