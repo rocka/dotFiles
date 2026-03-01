@@ -39,9 +39,10 @@ XDG_DATA_HOME   DEFAULT=@{HOME}/.local/share
 
 GTK_RC_FILES            DEFAULT=${XDG_CONFIG_HOME}/gtkrc
 GTK2_RC_FILES           DEFAULT=${XDG_CONFIG_HOME}/gtkrc-2.0
-NODE_REPL_HISTORY       DEFAULT=${XDG_STATE_HOME}/node/node_repl_history
+NODE_REPL_HISTORY       DEFAULT=${XDG_STATE_HOME}/node_repl_history
 NPM_CONFIG_USERCONFIG   DEFAULT=${XDG_CONFIG_HOME}/npm/npmrc
-PYTHONSTARTUP           DEFAULT=${XDG_CONFIG_HOME}/python/init.py
+PYTHON_HISTORY          DEFAULT=${XDG_STATE_HOME}/python_history
+PYTHONPYCACHEPREFIX     DEFAULT=${XDG_CACHE_HOME}/python
 ANDROID_HOME            DEFAULT=@{HOME}/Software/AndroidSDK
 ANDROID_USER_HOME       DEFAULT=@{HOME}/.android
 JAVA_TOOL_OPTIONS       DEFAULT="-Djava.util.prefs.userRoot=${XDG_DATA_HOME}/java -Dsun.java2d.uiScale=2 -Dawt.useSystemAAFontSettings=on -XX:-UsePerfData"

@@ -56,8 +56,6 @@ home, sweet `$HOME`
 │   ├── powerline
 │   │   └── themes
 │   │       └── tmux           // powerline segments in tmux
-│   ├── python
-│   │   └── init.py            // write python_histroy to $XDG_STATE_HOME
 │   ├── systemd                // systemd user service
 │   │   └── user
 │   │       ├── aria2.service
